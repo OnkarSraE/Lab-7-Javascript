@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: HTML and CSS Basics</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        h1{
+            font-size: 2em;
+            color: #333;
+        }
+        p{
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        ul li{
+            padding: 5px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Welcome to HTML and CSS Basics
+    </h1>
+    <p>HTML is the language in which most websites are written. HTML is used to create pages and make them functional.
+        HTML is the raw data that a webpage is built out of. All the text, links, cards, lists, and buttons are created
+        in HTML. CSS is what adds style to those plain elements.
+    </p>
+<ul id="listitem">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<button id="changeBackgroundcolor">Change Background</button>
+<button id="addnewitem">Add Item</button>
+
+<script>
+    function changeBackground() {
+        document.body.style.backgroundColor = "#A2D2FF"
+    }
+    document.getElementById('changeBackgroundcolor').addEventListener("click", changeBackground);
+
+    function addItem() {
+        const listItem = document.getElementById('listitem');
+        const newItem = document.createElement('li');
+        newItem.textContent = 'New Item';
+        listItem.appendChild(newItem);
+    }
+    document.getElementById('addnewitem').addEventListener("click", addItem);
+    
+</script>
+</body>
+
+</html>
